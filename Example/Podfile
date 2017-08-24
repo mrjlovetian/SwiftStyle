@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'SwiftStyle_Example' do
+  pod 'SwiftStyle', :path => '../'
+
+  target 'SwiftStyle_Tests' do
+    inherit! :search_paths
+
+    pod 'FBSnapshotTestCase'
+  end
+end
