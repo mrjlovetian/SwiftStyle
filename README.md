@@ -112,7 +112,6 @@ enum Shape {
 }
 ```
 
-
 ### 文字描述
 
 在所有提及到函数的文字中（包括教程、书、评论），请从调用者的视角进行考虑，将所有的必要参数名都包含进来，比如：
@@ -403,7 +402,6 @@ class Circle: Shape {
 		return "(\(x),\(y))"
 	}
 }
-
 ```
 
  
@@ -451,7 +449,6 @@ class BoardLocation {
 var diameter: Double {
 	return radius * 2
 }
-
 ```
 
  
@@ -466,7 +463,6 @@ var diameter: Double {
 		return radius * 2
 	}
 }
-
 ```
 
  
@@ -485,7 +481,6 @@ final class Box<T> {
 		self.value = value
 	}
 }
-
 ```
 
  
@@ -500,7 +495,6 @@ final class Box<T> {
 func reticulateSplines(spline: [Double]) -> Bool {
 	// reticulate code goes here
 }
-
 ```
 
  
@@ -514,7 +508,6 @@ func reticulateSplines(spline: [Double], adjustmentFactor: Double,
     translateConstant: Int, comment: String) -> Bool {
 	// reticulate code goes here
 }
-
 ```
 
  
@@ -540,7 +533,6 @@ UIView.animateWithDuration(1.0,
 		self.myView.removeFromSuperview()
 	}
 )
-
 ```
 
  
@@ -560,7 +552,6 @@ UIView.animateWithDuration(1.0,
 	}) { f in
 		self.myView.removeFromSuperview()
 }
-
 ```
 
  
@@ -573,7 +564,6 @@ UIView.animateWithDuration(1.0,
 attendeeList.sort { a, b in
 	a > b
 }
-
 ```
 
  
@@ -589,7 +579,6 @@ let value = numbers
 	.map {$0 * 2}
 	.filter {$0 > 50}
 	.map {$0 + 10}
-
 ```
 
  
@@ -600,24 +589,19 @@ let value = numbers
 
 **推荐：**
 
- 
 
 ```
 let width = 120.0 // Double
 let widthString = (width as NSNumber).stringValue // String
-
 ```
 
  
 
 **不推荐：**
 
- 
-
 ```
 let width: NSNumber = 120.0 // NSNumber
 let widthString: NSString = width.stringValue // NSString
-
 ```
 
  
@@ -643,7 +627,6 @@ enum Math {
 }
 
 radius * Math.pi * 2 // circumference
-
 ```
 
  
@@ -659,7 +642,6 @@ let e = 2.718281828459045235360287 // pollutes global namespace
 let pi = 3.141592653589793238462643
 
 radius * pi * 2 // is pi instance data or a global constant?
-
 ```
 
  
@@ -693,7 +675,6 @@ self.textContainer?.textLabel?.setNeedsDisplay()
 if let textContainer = self.textContainer {
 	// do many things with textContainer
 }
-
 ```
 
  
@@ -714,7 +695,6 @@ var volume: Double?
 if let subview = subview, volume = volume {
 	// do something with unwrapped subview and volume
 }
-
 ```
 
  
@@ -732,7 +712,6 @@ if let unwrappedSubview = optionalSubview {
     // do something with unwrappedSubview and realVolume
   }
 }
-
 ```
 
  
@@ -748,7 +727,6 @@ if let unwrappedSubview = optionalSubview {
 ```
 let bounds = CGRect(x: 40, y: 20, width: 120, height: 80)
 let centerPoint = CGPoint(x: 96, y: 42)
-
 ```
 
  
@@ -760,7 +738,6 @@ let centerPoint = CGPoint(x: 96, y: 42)
 ```
 let bounds = CGRectMake(40, 20, 120, 80)
 let centerPoint = CGPointMake(96, 42)
-
 ```
 
  
@@ -783,7 +760,6 @@ private func makeLocationManager() -> CLLocationManager {
   manager.requestAlwaysAuthorization()
   return manager
 }
-
 ```
 
  
@@ -806,7 +782,6 @@ let message = "Click the button"
 let currentBounds = computeViewBounds()
 var names = ["Mic", "Sam", "Christine"]
 let maximumWidth: CGFloat = 106.5
-
 ```
 
  
@@ -819,7 +794,6 @@ let maximumWidth: CGFloat = 106.5
 let message: String = "Click the button"
 let currentBounds: CGRect = computeViewBounds()
 let names = [String]()
-
 ```
 
  
@@ -849,7 +823,6 @@ var lookup: [String: Int] = [:]
 ```
 var names = [String]()
 var lookup = [String: Int]()
-
 ```
 
  
@@ -866,7 +839,6 @@ var lookup = [String: Int]()
 var deviceModels: [String]
 var employees: [Int: String]
 var faxNumber: Int?
-
 ```
 
  
@@ -879,7 +851,6 @@ var faxNumber: Int?
 var deviceModels: Array<String>
 var employees: Dictionary<Int, String>
 var faxNumber: Optional<Int>
-
 ```
 
  
@@ -897,7 +868,6 @@ var faxNumber: Optional<Int>
 ```
 let sorted = items.mergeSort() // easily discoverable
 rocket.launch() // clearly acts on the model
-
 ```
 
  
@@ -909,7 +879,6 @@ rocket.launch() // clearly acts on the model
 ```
 let sorted = mergeSort(items) // hard to discover
 launch(&rocket)
-
 ```
 
  
@@ -921,7 +890,6 @@ launch(&rocket)
 ```
 let tuples = zip(a, b)  // feels natural as a free function (symmetry)
 let value = max(x,y,z)  // another free function that feels natural
-
 ```
 
  
@@ -948,7 +916,6 @@ resource.request().onComplete { [weak self] response in
 	let model = strongSelf.updateModel(response)
 	strongSelf.updateUI(model)
 }
-
 ```
 
  
@@ -963,7 +930,6 @@ resource.request().onComplete { [unowned self] response in
 	let model = self.updateModel(response)
 	self.updateUI(model)
 }
-
 ```
 
  
@@ -978,7 +944,6 @@ resource.request().onComplete { [weak self] response in
 	let model = self?.updateModel(response)
 	self?.updateUI(model)
 }
-
 ```
 
  
@@ -997,7 +962,6 @@ resource.request().onComplete { [weak self] response in
 class TimeMachine {  
 	private dynamic lazy var fluxCapacitor = FluxCapacitor()
 }
-
 ```
 
  
@@ -1010,7 +974,6 @@ class TimeMachine {
 class TimeMachine {  
 	lazy dynamic private var fluxCapacitor = FluxCapacitor()
 }
-
 ```
 
  
@@ -1110,7 +1073,6 @@ func computeFFT(context: Context?, inputData: InputData?) throws -> Frequencies 
 		throw FFTError.noContext
 	}
 }
-
 ```
 
  
@@ -1124,7 +1086,6 @@ func computeFFT(context: Context?, inputData: InputData?) throws -> Frequencies 
 ```
 guard let number1 = number1, number2 = number2, number3 = number3 else { fatalError("impossible") }
 // do something with numbers
-
 ```
 
  
@@ -1150,7 +1111,6 @@ if let number1 = number1 {
 else {
 	fatalError("impossible")
 }
-
 ```
 
  
@@ -1197,7 +1157,6 @@ let swift = "not a scripting language";
 if name == "Hello" {
 	print("World")
 }
-
 ```
 
  
@@ -1210,7 +1169,6 @@ if name == "Hello" {
 if (name == "Hello") {
 	print("World")
 }
-
 ```
 
  
