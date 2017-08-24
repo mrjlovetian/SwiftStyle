@@ -1,8 +1,6 @@
 
 
-# [Swift 编码风格指南](/swift-style-guide/ "Swift 编码风格指南")
-
-2016-09-25
+# Swift 编码风格指南
 
 ## 背景
 
@@ -60,7 +58,6 @@ class app_widgetContainer {
 
 **推荐：**
 
-<div class="language-swift highlighter-rouge">
 
 ```
 let urlString: URLString
@@ -68,7 +65,6 @@ let userID: UserID
 
 ```
 
-</div>
 
 **不推荐：**
 

@@ -1,0 +1,23 @@
+PODS:
+  - FBSnapshotTestCase (2.1.4):
+    - FBSnapshotTestCase/SwiftSupport (= 2.1.4)
+  - FBSnapshotTestCase/Core (2.1.4)
+  - FBSnapshotTestCase/SwiftSupport (2.1.4):
+    - FBSnapshotTestCase/Core
+  - SwiftStyle (0.1.0)
+
+DEPENDENCIES:
+  - FBSnapshotTestCase
+  - SwiftStyle (from `../`)
+
+EXTERNAL SOURCES:
+  SwiftStyle:
+    :path: ../
+
+SPEC CHECKSUMS:
+  FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
+  SwiftStyle: f997c6b8c91578b554880f846b01af8ccd0b88a6
+
+PODFILE CHECKSUM: e4dc1c9642fa396c33d790f0803a933de258c71d
+
+COCOAPODS: 1.3.1

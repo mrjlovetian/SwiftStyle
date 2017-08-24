@@ -1,0 +1,6 @@
+framework module SwiftStyle {
+  umbrella header "SwiftStyle-umbrella.h"
+
+  export *
+  module * { export * }
+}
